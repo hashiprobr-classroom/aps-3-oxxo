@@ -6,13 +6,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MotoristaTest {
-    private Passageiro passageiro;
+
     private Corrida corrida;
     private Motorista motorista;
 
     @BeforeEach
     void setUp() {
-        passageiro = new Passageiro("123", "maria");
+        Passageiro passageiro = new Passageiro("123", "maria");
         corrida= new Corrida(passageiro);
         motorista=new Motorista("456", "bruno");
     }

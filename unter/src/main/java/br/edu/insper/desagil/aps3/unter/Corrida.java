@@ -34,17 +34,14 @@ public class Corrida {
     }
 
     private int arredonda (int nota){
-        int r=0;
         if (nota <1){
-            r=1;
+            nota=1;
         }
         else if (nota>5){
-            r=5;
+            nota=5;
         }
-        else{
-            r=nota;
-        }
-        return r;
+
+        return nota;
     }
 
     public void avaliaPassageiro(int nota){
