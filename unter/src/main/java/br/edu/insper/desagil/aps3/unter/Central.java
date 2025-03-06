@@ -26,10 +26,38 @@ public class Central {
                 }
             }
         }
+        if (t==0){
+            return 0;
+        }
+        else {
+            return  (double) s/t;
+        }
 
-        double r= s/t;
 
-        return r;
+
+    }
+
+    public double mediaMotorista(String CPF){
+        int s=0;
+        int t=0;
+
+        for (Corrida corrida:corridas){
+            if (corrida.getMotorista().getCPF().equals(CPF)){
+                int nota= corrida.getNotaMotorista();
+                if (nota !=0){
+                    s+=nota;
+                    t++;
+                }
+            }
+        }
+        if (t==0){
+            return 0;
+        }
+        else {
+            return  (double) s/t;
+        }
+
+
 
     }
 

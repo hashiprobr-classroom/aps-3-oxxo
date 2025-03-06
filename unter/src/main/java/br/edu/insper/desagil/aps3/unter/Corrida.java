@@ -12,13 +12,6 @@ public class Corrida {
         this.notaMotorista=0;
     }
 
-    public Passageiro getPassageiro() {
-        return passageiro;
-    }
-
-    public Motorista getMotorista() {
-        return motorista;
-    }
 
     public void setMotorista(Motorista motorista) {
         this.motorista = motorista;
@@ -30,6 +23,14 @@ public class Corrida {
 
     public int getNotaMotorista() {
         return notaMotorista;
+    }
+
+    public Passageiro getPassageiro() {
+        return passageiro;
+    }
+
+    public Motorista getMotorista() {
+        return motorista;
     }
 
     private int arredonda (int nota){
@@ -46,16 +47,15 @@ public class Corrida {
         return r;
     }
 
-    public int avaliaPassageiro(int nota){
-        int r= arredonda(notaPassageiro);
-        return r;
+    public void avaliaPassageiro(int nota){
+        notaPassageiro= arredonda(nota);
 
     }
 
-    public int avaliaMotorista(int nota){
-        int r= arredonda(notaMotorista);
-        return r;
+    public void  avaliaMotorista(int nota){
+        notaMotorista= arredonda(nota);
 
     }
+
 
 }
